@@ -98,7 +98,7 @@ class Simulator:
         self.viewer.draw_frame()  # render the frame
 
     def _run_sim(self):
-        self.sim_event_source = GLib.timeout_add(int(self.period * 1000), self._run_sim)
+        self.sim_event_source = GLib.timeout_add(int(self.period * 10000), self._run_sim)
         self._step_sim()
 
     def _step_sim(self):
